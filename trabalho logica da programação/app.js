@@ -10,3 +10,4 @@ exibirTexto('p', 'escolha um número ente 1 e 10');
 function verficarChute(){
     console.log('botão clicado!');
 }
+ a
