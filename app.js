@@ -1,4 +1,5 @@
 let listaNumerosSorteados = []
+let numeroLimite = 10;
 let numeroSecreto = gerarNumero;
 let tentativas = 1;
 
@@ -31,9 +32,15 @@ function verficarChute(){
     }
 }
 function gerarNumero(){
-    let NumeroEscolhido parseInt(Math.random() * 10 + 1);
-        if (listaNumerosSorteados.includes(numeroEscolhido)){
-            return GerarNumero();
+    let NumeroEscolhido parseInt(Math.random() * numeroLimite + 1);
+    let QuantidadeDeElementos = listaNumerosSorteados.length;
+
+        if (quantidadeDeElementosNaLista == numeroLimite) {
+        listaDeNumerosSorteados = [];
+        }
+        if (listaDeNumerosSorteados.includes(NumeroEscolhido){
+            return gerarNumero();
+        })
         } else{
             listaNumerosSorteados.push;
             console.log()
