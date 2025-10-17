@@ -10,8 +10,6 @@ function exibirMensagem(){
     exibirTexto('h1', 'jogo do número secreto');
     exibirTexto('p', 'escolha um número ente 1 e 10');
 }
-exibirTexto('h1', 'jogo do número secreto');
-exibirTexto('p', 'escolha um número ente 1 e 10');
 
 
 function verficarChute(){
