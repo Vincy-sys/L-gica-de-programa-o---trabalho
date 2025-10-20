@@ -19,7 +19,7 @@ function verficarChute(){
     if(chute == numeroSecreto){
         exibirTexto ('h1', 'acertou!');
         let palavraTentativa = tentativas > 1 ? 'tentativas' : tentativa;
-        let mensagemTentativas = `você descobriu o número secreto com ${tentativas} ${tentativas!}`;
+        let mensagemTentativas = `você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`;
         exibirTexto('p', mensagemTentativas);
         document.getElementyById('reiniciar').removeAttribute ('disabled');
     } else{
@@ -33,7 +33,7 @@ function verficarChute(){
     }
 }
 function gerarNumero(){
-    let NumeroEscolhido parseInt(Math.random() * numeroLimite + 1);
+    let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
     let QuantidadeDeElementos = listaNumerosSorteados.length;
 
         if (quantidadeDeElementosNaLista == numeroLimite) {
