@@ -6,6 +6,7 @@ let tentativas = 1;
 function exibirTexto(tag, texto){
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
+    responsiveVoice.Speak(texto,'Brazilian Portuguese Female', {rate:1.2}); 
 }
 function exibirMensagem(){
     exibirTexto('h1', 'jogo do número secreto');
@@ -38,10 +39,10 @@ function gerarNumero(){
         if (quantidadeDeElementosNaLista == numeroLimite) {
         listaDeNumerosSorteados = [];
         }
-        if (listaDeNumerosSorteados.includes(NumeroEscolhido){
+        if (listaDeNumerosSorteados.includes(NumeroEscolhido)){
             return gerarNumero();
-        })
-        } else{
+        }
+        else{
             listaNumerosSorteados.push;
             console.log()
             return NumeroEscolhido;
