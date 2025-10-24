@@ -1,6 +1,6 @@
 let listaNumerosSorteados = [];
 let numeroLimite = 10;
-let numeroSecreto = gerarNumero;
+let numeroSecreto = gerarNumero();
 let tentativas = 1;
 
 function exibirTexto(tag, texto){
@@ -8,11 +8,13 @@ function exibirTexto(tag, texto){
     campo.innerHTML = texto;
     responsiveVoice.Speak(texto,'Brazilian Portuguese Female', {rate:1.2}); 
 }
+
 function exibirMensagem(){
     exibirTexto('h1', 'jogo do número secreto');
     exibirTexto('p', 'escolha um número ente 1 e 10');
 }
 
+exibirMensagem();
 
 function verficarChute(){
     let chute = document.querySelector('input').value;
@@ -35,18 +37,18 @@ function verficarChute(){
 }
 function gerarNumero(){
     let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
-    let QuantidadeDeElementos = listaNumerosSorteados.length;
+    let quantidadeDeElementos = listaNumerosSorteados.length;
 
         if (quantidadeDeElementos == numeroLimite) {
         listaNumerosSorteados = [];
         }
-        if (listaNumerosSorteados.includes(NumeroEscolhido)){
+        if (listaNumerosSorteados.includes(numeroEscolhido)){
             return gerarNumero();
         }
         else{
             listaNumerosSorteados.push(numeroEscolhido);
             console.log(listaNumerosSorteados);
-            return NumeroEscolhido;
+            return numeroEscolhido;
         }
 }
 function limparCampo(){
